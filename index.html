@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ramya S | Interactive Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+}
+
+/* Main container */
+.resume {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.header p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    background: #222;
+}
+
+.nav button {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav button:hover {
+    background: #00c6ff;
+    color: black;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 35px;
+    animation: fade 0.6s ease-in-out;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    color: #2575fc;
+    border-bottom: 3px solid #2575fc;
+    padding-bottom: 6px;
+}
+
+/* Skills */
+.skill-group {
+    margin-top: 15px;
+}
+
+.skill-group span {
+    display: inline-block;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    padding: 10px 16px;
+    margin: 6px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes fade {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Ramya S</h1>
+        <p>📧 ramyakssrinivas714@gmail.com</p>
+        <p>📞 8310085941</p>
+        <p>📍 Kolar District, Karnataka</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <button onclick="show('objective')">Career Objective</button>
+        <button onclick="show('education')">Education</button>
+        <button onclick="show('skills')">Technical Skills</button>
+        <button onclick="show('internship')">Internship</button>
+        <button onclick="show('interests')">Interests</button>
+        <button onclick="show('languages')">Languages</button>
+    </div>
+
+    <!-- CAREER OBJECTIVE -->
+    <div id="objective" class="section active">
+        <h2>Career Objective</h2>
+        <p>
+            To obtain a challenging position in a reputed organization where I can apply
+            my technical and analytical skills, learn new technologies, and contribute
+            effectively to organizational growth while building a successful career
+            in the IT field.
+        </p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div id="education" class="section">
+        <h2>Educational Qualification</h2>
+        <p><b>B.C.A – Bachelor of Computer Applications</b><br>
+           Indus Valley Degree College, Bengaluru<br>
+           Bengaluru North University (2026)<br>
+           CGPA: 8.79
+        </p>
+
+        <p><b>12th (PUC)</b><br>
+           Sri Jnana Ganga PU College, Chintamani<br>
+           KSEEB (2023) – 78.50%
+        </p>
+
+        <p><b>10th (SSLC)</b><br>
+           Adarsha Vidya Samsthe, Srinivaspur<br>
+           KSEEB (2021) – 91.52%
+        </p>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div id="skills" class="section">
+        <h2>Technical Skills</h2>
+
+        <h3>Programming Languages</h3>
+        <div class="skill-group">
+            <span>C</span>
+            <span>Java</span>
+            <span>Python</span>
+        </div>
+
+        <h3>Web Technologies</h3>
+        <div class="skill-group">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript (Basics)</span>
+        </div>
+
+        <h3>Databases</h3>
+        <div class="skill-group">
+            <span>MySQL</span>
+            <span>Oracle</span>
+        </div>
+
+        <h3>Operating Systems</h3>
+        <div class="skill-group">
+            <span>Windows</span>
+            <span>Android</span>
+        </div>
+    </div>
+
+    <!-- INTERNSHIP -->
+    <div id="internship" class="section">
+        <h2>Internship</h2>
+        <p>
+            No internship experience yet. Highly motivated to gain hands-on experience
+            and improve technical skills through internships and real-time projects.
+        </p>
+    </div>
+
+    <!-- INTERESTS -->
+    <div id="interests" class="section">
+        <h2>Interests</h2>
+        <ul>
+            <li>Playing Cricket 🏏</li>
+            <li>Preparing for Civil Services 📘</li>
+        </ul>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div id="languages" class="section">
+        <h2>Languages Known</h2>
+        <ul>
+            <li>English</li>
+            <li>Kannada</li>
+            <li>Telugu</li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Ramya S | Interactive Resume Website
+    </div>
+
+</div>
+
+<script>
+function show(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
